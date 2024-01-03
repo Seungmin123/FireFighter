@@ -1,0 +1,22 @@
+{
+  "name": "firefighter",
+  "version": "1.0.0",
+  "description": "불 난 내 지식창고에 불을 꺼줄 명예 소방관",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "js-yaml": "^3.14.0",
+    "axios": "^0.21.1",
+    "moment": "^2.29.1",
+    "rss-parser": "^3.10.0"
+  },
+  "devDependencies": {}
+}
