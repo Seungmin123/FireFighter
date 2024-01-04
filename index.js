@@ -19,7 +19,9 @@ parseRssFeed(rssUrls).then(results => {
     //let list = results.filter(item => moment(new Date(item.pubDate)).isBetween(oneWeekAgo, now))
 
     let list = results
-                .map(v => v.items).flat()
+                .map(v => v.items.map(t => {
+                    return {...t, company: v.title}
+                })).flat()
                 .filter(item => moment(new Date(item.pubDate)).isSame(yesterday, 'day'))
 
     sendSlackMessage(tagSelector(list))
