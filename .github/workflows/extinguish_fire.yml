@@ -16,5 +16,5 @@ jobs:
         run: npm install
       - name: Run script
         env:
-          KAKAO_ACCESS_TOKEN: ${{ secrets.KAKAO_ACCESS_TOKEN }}
+          COW_SLACK_URL: ${{ secrets.COW_SLACK_URL }}
         run: node index.js

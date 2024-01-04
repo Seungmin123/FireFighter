@@ -3,18 +3,15 @@ const axios = require('axios');
 //const ACCESS_TOKEN = process.env.KAKAO_ACCESS_TOKEN;
 const ACCESS_TOKEN = '59bddf8b63947da967664b1437b8951d';
 
-exports.sendMessage = async function (posts) {
+exports.sendKakaoMessage = async function (posts) {
     let headers = {
-      'Authorization': 'Bearer ${ACCESS_TOKEN}',
+      'Authorization': 'Bearer \'' + ACCESS_TOKEN + '\'',
     };
 
     let bodies = {
       'template_object': JSON.stringify({
         'object_type': 'text',
         'text': posts.map(post => `${post.title}: ${post.link}`).join('\n'),
-        'link': {
-          'web_url': 'https://developers.kakao.com',
-        },
       }),
     };
 
