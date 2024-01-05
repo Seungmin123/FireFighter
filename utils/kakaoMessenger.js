@@ -1,7 +1,6 @@
 const axios = require('axios');
 
-//const ACCESS_TOKEN = process.env.KAKAO_ACCESS_TOKEN;
-const ACCESS_TOKEN = '59bddf8b63947da967664b1437b8951d';
+const ACCESS_TOKEN = process.env.KAKAO_ACCESS_TOKEN;
 
 exports.sendKakaoMessage = async function (posts) {
     let headers = {
