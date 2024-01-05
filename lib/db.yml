@@ -123,8 +123,6 @@
   blog: https://blog.linewalks.com/
   rss: https://blog.linewalks.com/feed
   rocketpunch: https://www.rocketpunch.com/companies/linewalks
-
- -------------------------------------------------------
 - name: 네이버 클라우드 플랫폼
   blog: https://blog.naver.com/n_cloudplatform
   rss: https://rss.blog.naver.com/n_cloudplatform.xml
@@ -170,11 +168,6 @@
   rss: https://www.cubrid.com/blog/rss
   youtube: https://www.youtube.com/channel/UCMM_fm0yEHFsB8Ri4CZJcwQ
   rocketpunch: https://www.rocketpunch.com/companies/kyubeurideu
-- name: 퀄컴코리아
-  blog: https://blog.naver.com/qualcommkr
-  rss: https://rss.blog.naver.com/qualcommkr.xml
-  facebook: https://www.facebook.com/QualcommKR/
-  youtube: https://www.youtube.com/channel/UCQp-q5ysBDacrAKdkGcsYjw
 - name: AWS Korea
   blog: https://aws.amazon.com/ko/blogs/korea/
   rss: https://aws.amazon.com/ko/blogs/korea/feed/

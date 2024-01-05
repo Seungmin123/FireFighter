@@ -11,7 +11,7 @@ const rssUrls = data.map(item => item.rss).filter(rss => rss);
 
 // time zone 라이브러리 쓰기 싫음
 // 한국시간 기준 오전 9시 이전에 실행할 경우 substract 0 그 이후라면 1로 전날 구하기
-let yesterday = moment().subtract(0, 'days').startOf('day')
+let yesterday = moment().subtract(1, 'days').startOf('day')
 
 parseRssFeed(rssUrls).then(results => {
 
