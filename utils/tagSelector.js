@@ -78,6 +78,10 @@ const TAGS =  [
         "ECK",
         "elasticsearch",
         "architecture",
+        "front",
+        "back",
+        "msa",
+        "k8s"
 
     ]
 
