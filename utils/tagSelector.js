@@ -70,7 +70,15 @@ const TAGS =  [
         "Slack",
         "UML",
         "VR",
-        "Windows"
+        "Windows",
+        "XCode",
+        "WWDC",
+        "tuist",
+        "ELK",
+        "ECK",
+        "elasticsearch",
+        "architecture",
+
     ]
 
 
