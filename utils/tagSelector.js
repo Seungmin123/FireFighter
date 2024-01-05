@@ -134,10 +134,10 @@ exports.tagSelector = function (posts) {
                   }
                })
 
-               if(matchedTag.length <= 0) matchedTag = ['😂']
-
-               let newItem = {...post, targetTag: matchedTag}
-               accumulator.push(newItem)
+               if(matchedTag.length > 0) {
+                   let newItem = {...post, targetTag: matchedTag}
+                   accumulator.push(newItem)
+               }
 
                return accumulator
            }, [])
