@@ -24,7 +24,9 @@ parseRssFeed(rssUrls).then(results => {
 //                        return {...t, company: v.title}
 //                    })).flat()
 //                    .filter(item => moment(new Date(item.pubDate)).isBetween(oneWeekAgo, now))
-//    list.map(v => console.log(v.company + ' : ' + v.title + ' :: ' + v.pubDate))
+//
+//    list = tagSelector(list)
+//    list.map(v => console.log(v.company + ' : ' + v.title + ' :: ' + v.pubDate + '(' + v.targetTag + ')' + '[' + v.categories + ']'))
 
     let list = results
                 .map(v => v.items.map(t => {

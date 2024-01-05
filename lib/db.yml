@@ -135,16 +135,16 @@
   blog: https://blog.rocketpunch.com/
   rss: https://blog.rocketpunch.com/feed/
   rocketpunch: https://www.rocketpunch.com/companies/rocketpunch
-- name: 솔트룩스
-  blog: https://blog.naver.com/saltluxmarketing
-  rss: https://rss.blog.naver.com/saltluxmarketing.xml
-  home: http://www.saltlux.com/
-  instagram: https://www.instagram.com/slx_saltlux/
-  rocketpunch: https://www.rocketpunch.com/companies/saltlux-1
-- name: 시스코 코리아
-  blog: https://gblogs.cisco.com/kr/
-  rss: https://gblogs.cisco.com/kr/feed/
-  rocketpunch: https://www.rocketpunch.com/companies/cisco-systems
+#- name: 솔트룩스
+#  blog: https://blog.naver.com/saltluxmarketing
+#  rss: https://rss.blog.naver.com/saltluxmarketing.xml
+#  home: http://www.saltlux.com/
+#  instagram: https://www.instagram.com/slx_saltlux/
+#  rocketpunch: https://www.rocketpunch.com/companies/saltlux-1
+#- name: 시스코 코리아
+#  blog: https://gblogs.cisco.com/kr/
+#  rss: https://gblogs.cisco.com/kr/feed/
+#  rocketpunch: https://www.rocketpunch.com/companies/cisco-systems
 - name: 씨앤텍시스템즈
   blog: https://cntechsystems.tistory.com/
   rss: https://cntechsystems.tistory.com/rss

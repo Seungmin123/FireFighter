@@ -39,7 +39,7 @@ const TAGS =  [
         "Javascript",
         "Jekyll",
         "PWA",
-        "React.js",
+        "React",
         "Vue",
         "Webpack",
         "BERT",
@@ -76,12 +76,36 @@ const TAGS =  [
         "tuist",
         "ELK",
         "ECK",
-        "elasticsearch",
-        "architecture",
-        "front",
-        "back",
-        "msa",
-        "k8s"
+        "Elasticsearch",
+        "Architecture",
+        "Front",
+        "Back",
+        "MSA",
+        "K8S",
+        "DBA",
+        "Transaction",
+        "테스트",
+        "소나큐브",
+        "sonarqube",
+        "Refactoring",
+        "리팩토링",
+        "리펙토링",
+        "클린 코드",
+        "데이터베이스",
+        "우아한",
+        "컨퍼런스",
+        "Memory",
+        "PM",
+        "QA",
+        "Tech",
+        "traffic",
+        "coding test",
+        "VirtualThread",
+        "인공지능",
+        "AI",
+        "머신러닝",
+        "IOS",
+        "CQRS"
 
     ]
 
@@ -100,18 +124,20 @@ exports.tagSelector = function (posts) {
     return posts
            .reduce((accumulator, post) =>
            {
-               if(post.categories === undefined) {
-                    let newItem = {...post, targetTag: '😂'}
-                    accumulator.push(newItem)
-                    return accumulator
-               }
+                let isCategories = post.categories === undefined
 
-               let matchedTag = TAGS.filter(tag => post.categories.some(category => category.toLowerCase().includes(tag.toLowerCase())))
+               let matchedTag = TAGS.filter(tag => {
+                  if(isCategories) {
+                       return post.title.toLowerCase().includes(tag.toLowerCase())
+                  }else{
+                       return post.title.toLowerCase().includes(tag.toLowerCase()) || post.categories.some(category => category.toLowerCase().includes(tag.toLowerCase()))
+                  }
+               })
 
-               if(matchedTag.length > 0) {
-                    let newItem = {...post, targetTag: matchedTag}
-                    accumulator.push(newItem)
-               }
+               if(matchedTag.length <= 0) matchedTag = ['😂']
+
+               let newItem = {...post, targetTag: matchedTag}
+               accumulator.push(newItem)
 
                return accumulator
            }, [])
