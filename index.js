@@ -1,6 +1,7 @@
 const { parseYaml } = require('./utils/yamlParser');
 const { parseRssFeed } = require('./utils/rssParser');
 const { sendSlackMessage } = require('./utils/slackMessenger');
+const { sendSlackLogMessage } = require('./utils/slackLogMessenger');
 const { tagSelector } = require('./utils/tagSelector');
 const moment = require('moment')
 
@@ -34,6 +35,9 @@ parseRssFeed(rssUrls).then(results => {
                 })).flat()
                 .filter(item => moment(new Date(item.pubDate)).isSame(yesterday, 'day'))
 
+//    list = tagSelector(list)
+//    list.map(v => console.log(v.company + ' : ' + v.title + ' :: ' + v.pubDate + '(' + v.targetTag + ')'))
     sendSlackMessage(tagSelector(list))
+    sendSlackLogMessage(list)
 
 })
