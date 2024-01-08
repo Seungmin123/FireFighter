@@ -37,6 +37,8 @@ parseRssFeed(rssUrls).then(results => {
 
 //    list = tagSelector(list)
 //    list.map(v => console.log(v.company + ' : ' + v.title + ' :: ' + v.pubDate + '(' + v.targetTag + ')'))
+
+    console.log(moment())
     sendSlackMessage(tagSelector(list))
     sendSlackLogMessage(list)
 
