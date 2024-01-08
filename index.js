@@ -39,7 +39,9 @@ parseRssFeed(rssUrls).then(results => {
 //    list.map(v => console.log(v.company + ' : ' + v.title + ' :: ' + v.pubDate + '(' + v.targetTag + ')'))
 
     console.log(moment())
-    sendSlackMessage(tagSelector(list))
+    if(list){
+        sendSlackMessage(tagSelector(list))
+    }
     sendSlackLogMessage(list)
 
 })
