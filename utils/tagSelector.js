@@ -105,20 +105,16 @@ const TAGS =  [
         "AI",
         "머신러닝",
         "IOS",
-        "CQRS"
+        "CQRS",
+        "디자인 패턴",
+        "쿠버네티스",
+        "대용량",
+        "DevOps"
 
     ]
 
 
 exports.tagSelector = function (posts) {
-//    let selected = posts
-//                   .filter(post =>
-//                       {
-//                           if(post.categories === undefined) return true
-//
-//                           return post.categories.some(category => TAGS.some(tag => category.toLowerCase().includes(tag.toLowerCase())))
-//                       }
-//                   )
 
     // 매칭된 태그 추가
     return posts
