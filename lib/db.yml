@@ -135,6 +135,8 @@
   blog: https://blog.rocketpunch.com/
   rss: https://blog.rocketpunch.com/feed/
   rocketpunch: https://www.rocketpunch.com/companies/rocketpunch
+- name: 여기어때
+  rss: https://techblog.gccompany.co.kr/feed
 #- name: 솔트룩스
 #  blog: https://blog.naver.com/saltluxmarketing
 #  rss: https://rss.blog.naver.com/saltluxmarketing.xml

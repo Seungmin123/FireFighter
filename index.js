@@ -40,7 +40,7 @@ parseRssFeed(rssUrls).then(results => {
 
     console.log(moment())
     if(list){
-        sendSlackMessage(tagSelector(list))
+        //sendSlackMessage(tagSelector(list))
     }
     sendSlackLogMessage(list)
 
