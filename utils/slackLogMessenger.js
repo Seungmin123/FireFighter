@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-const SLACK_DEV_URL = process.env.COW_SLACK_DEV_URL;
+const SLACK_DEV_URL = process.env.COW_SLACK_LOG_URL;
 
 exports.sendSlackLogMessage = async function (posts) {
     let today = new Date();
