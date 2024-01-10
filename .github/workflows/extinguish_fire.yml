@@ -18,4 +18,5 @@ jobs:
       - name: Run script
         env:
           COW_SLACK_URL: ${{ secrets.COW_SLACK_URL }}
+          COW_SLACK_LOG_URL: ${{ secrets.COW_SLACK_LOG_URL }}
         run: node index.js
