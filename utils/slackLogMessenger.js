@@ -13,6 +13,6 @@ exports.sendSlackLogMessage = async function (posts) {
     }
 
     axios.post(SLACK_DEV_URL, JSON.stringify(message))
-        .then(console.log('Slack MSG FINISH'))
+        .then(console.log('Slack Log MSG FINISH'))
 
 }
