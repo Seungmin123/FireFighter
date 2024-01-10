@@ -16,31 +16,15 @@ let yesterday = moment().subtract(1, 'days').startOf('day')
 
 parseRssFeed(rssUrls).then(results => {
 
-    // 최근 n일 내 업데이트 된 게시물
-//    let oneWeekAgo = moment().subtract(90, 'days');  // 일주일 전
-//    let now = moment();  // 현재 시간
-//
-//    let list = results
-//                    .map(v => v.items.map(t => {
-//                        return {...t, company: v.title}
-//                    })).flat()
-//                    .filter(item => moment(new Date(item.pubDate)).isBetween(oneWeekAgo, now))
-//
-//    list = tagSelector(list)
-//    list.map(v => console.log(v.company + ' : ' + v.title + ' :: ' + v.pubDate + '(' + v.targetTag + ')' + '[' + v.categories + ']'))
-
     let list = results
                 .map(v => v.items.map(t => {
                     return {...t, company: v.title}
                 })).flat()
                 .filter(item => moment(new Date(item.pubDate)).isSame(yesterday, 'day'))
 
-//    list = tagSelector(list)
-//    list.map(v => console.log(v.company + ' : ' + v.title + ' :: ' + v.pubDate + '(' + v.targetTag + ')'))
-
     console.log(moment())
     if(list){
-        //sendSlackMessage(tagSelector(list))
+        sendSlackMessage(tagSelector(list))
     }
     sendSlackLogMessage(list)
 

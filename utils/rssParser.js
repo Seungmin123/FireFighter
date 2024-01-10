@@ -1,18 +1,6 @@
 const Parser = require('rss-parser');
 const parser = new Parser();
 
-// V1
-//exports.parseRssFeed = async function (rssUrl) {
-//    try {
-//        const feed = await parser.parseURL(rssUrl);
-//        return feed.items;
-//    } catch (error) {
-//        console.log(error)
-//        return [];
-//    }
-//};
-
-// V2
 async function parseRss(url) {
     let feed = await parser.parseURL(url)
     return feed
