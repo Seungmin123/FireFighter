@@ -25,7 +25,7 @@ parseRssFeed(rssUrls).then(results => {
     console.log(moment())
 
     let selectedList = tagSelector(list)
-    if(selectedList){
+    if(selectedList && selectedList != 0){
         sendSlackMessage(selectedList)
     }
     sendSlackLogMessage(list)
