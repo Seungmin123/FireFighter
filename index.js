@@ -23,7 +23,7 @@ parseRssFeed(rssUrls).then(results => {
                 .filter(item => moment(new Date(item.pubDate)).isSame(yesterday, 'day'))
 
     console.log(moment())
-    if(list){
+    if(list && list.length != 0){
         sendSlackMessage(tagSelector(list))
     }
     sendSlackLogMessage(list)
