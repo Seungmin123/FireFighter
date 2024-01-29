@@ -125,7 +125,7 @@ exports.tagSelector = function (posts) {
     return posts
            .reduce((accumulator, post) =>
            {
-                let isCategories = post.categories === undefined
+               let isCategories = post.categories === undefined
 
                let matchedTag = TAGS.filter(tag => {
                   if(isCategories) {

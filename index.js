@@ -24,10 +24,12 @@ parseRssFeed(rssUrls).then(results => {
 
     console.log(moment())
 
-    let selectedList = tagSelector(list)
-    if(selectedList && selectedList != 0){
-        sendSlackMessage(selectedList)
-    }
-    sendSlackLogMessage(list)
+//    let selectedList = tagSelector(list)
+//    if(selectedList && selectedList != 0){
+//        sendSlackMessage(selectedList)
+//    }
+    //sendSlackLogMessage(list)
+
+    if(list.length > 0) sendSlackMessage(list)
 
 })
